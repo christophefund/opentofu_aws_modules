@@ -1,0 +1,9 @@
+#------------------------------------------------------------------------------
+# Create IAM Policy
+#------------------------------------------------------------------------------
+resource "aws_iam_policy" "this" {
+  name        = var.policy_name
+  description = var.policy_description
+  policy      = var.policy_document
+  tags        = var.tags
+}
