@@ -9,7 +9,7 @@ locals {
     Sid    = "EnableIAMUserPermissions"
     Effect = "Allow"
     Principal = {
-      AWS = "arn:aws:iam::${var.aws_account_id}:root"
+      AWS = "arn:aws:iam::${local.account_id}:root"
     }
     Action   = "kms:*"
     Resource = "*"

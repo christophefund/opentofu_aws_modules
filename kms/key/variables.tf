@@ -6,10 +6,6 @@ variable "tags" {
   type        = map(string)
 }
 
-variable "aws_account_id" {
-  description = "Description of the KMS key"
-  type        = string
-}
 
 #------------------------------------------------------------------------------
 # IAM Policy
