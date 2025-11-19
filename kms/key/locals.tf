@@ -6,7 +6,7 @@ locals {
 # Create a Default Root Account KMS Key Policy if not provided
 #------------------------------------------------------------------------------
   default_policy_statements = [{
-    Sid    = "EnableIAMUserPermissions"
+    Sid    = "EnableRootUserPermissions"
     Effect = "Allow"
     Principal = {
       AWS = "arn:aws:iam::${local.account_id}:root"

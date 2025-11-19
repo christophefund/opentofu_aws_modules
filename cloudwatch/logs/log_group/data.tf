@@ -7,4 +7,4 @@ data "aws_region" "current" {}
 #------------------------------------------------------------------------------
 # Caller Identity (AWS Account executing Terraform)
 #------------------------------------------------------------------------------
-data "aws_caller_identity" "caller_identify" {}
+data "aws_caller_identity" "current" {}
