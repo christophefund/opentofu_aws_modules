@@ -1,19 +1,24 @@
-output "key_id" {
-  description = "ID of the KMS key"
-  value       = aws_kms_key.this.key_id
+output "function_name" {
+  description = "The name of the Lambda function"
+  value       = aws_lambda_function.this.function_name
 }
 
-output "key_arn" {
-  description = "ARN of the KMS key"
-  value       = aws_kms_key.this.arn
+output "function_arn" {
+  description = "The ARN of the Lambda function"
+  value       = aws_lambda_function.this.arn
 }
 
-output "key_alias" {
-  description = "Alias of the KMS key"
-  value       = try(aws_kms_alias.this[0].name, null)
+output "function_invoke_arn" {
+  description = "The Invoke ARN of the Lambda function (used for permissions or asynchronous invoking)"
+  value       = aws_lambda_function.this.invoke_arn
 }
 
-output "key_alias_arn" {
-  description = "ARN of the KMS key alias"
-  value       = try(aws_kms_alias.this[0].arn, null)
+output "last_modified" {
+  description = "Timestamp of when the Lambda function was last modified"
+  value       = aws_lambda_function.this.last_modified
+}
+
+output "version" {
+  description = "Version of the Lambda function"
+  value       = aws_lambda_function.this.version
 }
