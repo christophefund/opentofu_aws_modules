@@ -37,7 +37,7 @@ variable "timeout" {
   default     = 30
 }
 
-variable "environment" {
+variable "environment_vars" {
   description = "Environment variables"
   type        = map(string)
   default     = {}
@@ -69,6 +69,12 @@ variable "s3_key" {
 
 variable "s3_object_version" {
   description = "S3 object version"
+  type        = string
+  default     = null
+}
+
+variable "iam_role" {
+  description = "IAM Role to be used by the Lambda Function"
   type        = string
   default     = null
 }
