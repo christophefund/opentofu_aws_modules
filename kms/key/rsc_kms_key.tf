@@ -10,7 +10,7 @@ resource "aws_kms_key" "this" {
   is_enabled               = var.is_enabled
   enable_key_rotation      = var.enable_key_rotation && var.key_usage == "ENCRYPT_DECRYPT" && var.customer_master_key_spec == "SYMMETRIC_DEFAULT"
   multi_region             = var.multi_region
-  #tags                     = var.tags
+  tags                     = var.tags
 }
 
 #------------------------------------------------------------------------------
