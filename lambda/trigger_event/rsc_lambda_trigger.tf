@@ -2,6 +2,8 @@
 # Create Lambda Function Trigger
 #------------------------------------------------------------------------------
 resource "aws_cloudwatch_event_rule" "this" {
+  tags          = var.tags
+  
   name          = var.rule_name != null ? var.rule_name : null
   description   = var.rule_description
   event_pattern = var.event_pattern
