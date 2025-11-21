@@ -1,7 +1,11 @@
-output "event_rule_arn" {
-  value = aws_cloudwatch_event_rule.this.arn
+output "ssm_param_name" {
+  value = aws_ssm_parameter.this.name
 }
 
-output "event_rule_name" {
-  value = aws_cloudwatch_event_rule.this.name
+output "ssm_param_arn" {
+  value = aws_ssm_parameter.this.arn
+}
+
+output "ssm_param_version" {
+  value = aws_ssm_parameter.this.version
 }
