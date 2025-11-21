@@ -2,7 +2,7 @@
 # Create Lambda Function
 #------------------------------------------------------------------------------
 resource "aws_lambda_function" "this" {
-  tags          = var.tags
+  tags = var.tags
 
   function_name = var.function_name
   handler       = var.handler
@@ -16,7 +16,7 @@ resource "aws_lambda_function" "this" {
   memory_size = var.memory_size
   timeout     = var.timeout
 
-  role        = var.iam_role
+  role = var.iam_role
 
   environment {
     variables = var.environment_vars

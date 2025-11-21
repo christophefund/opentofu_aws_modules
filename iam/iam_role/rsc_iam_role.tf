@@ -2,12 +2,12 @@
 # Create IAM Role with Trust Policy for all Accounts in the Organization
 #------------------------------------------------------------------------------
 resource "aws_iam_role" "this" {
-  name                  = var.role_name
-  description           = var.role_description
-  assume_role_policy    = var.trust_policy
-  max_session_duration  = var.max_session_duration
- # force_detach_policies = var.force_detach_policies
-  tags                  = var.tags
+  name                 = var.role_name
+  description          = var.role_description
+  assume_role_policy   = var.trust_policy
+  max_session_duration = var.max_session_duration
+  # force_detach_policies = var.force_detach_policies
+  tags = var.tags
 }
 
 

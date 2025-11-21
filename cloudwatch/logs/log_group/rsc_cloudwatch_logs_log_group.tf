@@ -7,7 +7,7 @@ resource "aws_cloudwatch_log_group" "this" {
   kms_key_id        = var.kms_key_arn
   log_group_class   = var.log_group_class
   #skip_destroy      = var.skip_destroy
-  tags              = var.tags
+  tags = var.tags
 }
 
 #------------------------------------------------------------------------------

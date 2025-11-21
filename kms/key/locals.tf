@@ -2,9 +2,9 @@ locals {
   account_id = data.aws_caller_identity.current.account_id
   region     = data.aws_region.current.id
 
-#------------------------------------------------------------------------------
-# Create a Default Root Account KMS Key Policy if not provided
-#------------------------------------------------------------------------------
+  #------------------------------------------------------------------------------
+  # Create a Default Root Account KMS Key Policy if not provided
+  #------------------------------------------------------------------------------
   default_policy_statements = [{
     Sid    = "EnableRootUserPermissions"
     Effect = "Allow"
@@ -16,7 +16,7 @@ locals {
   }]
 
   default_policy = jsonencode({
-    Version = "2012-10-17"
+    Version   = "2012-10-17"
     Statement = local.default_policy_statements
   })
 

@@ -109,13 +109,13 @@ variable "create_metric_filter" {
 variable "metric_filters" {
   description = "List of metric filter configurations"
   type = list(object({
-    name           = string
-    pattern        = string
-    metric_name    = string
-    namespace      = string
-    value          = string
-    default_value  = optional(number)
-    unit           = optional(string)
+    name          = string
+    pattern       = string
+    metric_name   = string
+    namespace     = string
+    value         = string
+    default_value = optional(number)
+    unit          = optional(string)
   }))
   default = []
 }
