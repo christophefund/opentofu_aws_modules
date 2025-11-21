@@ -11,8 +11,9 @@ resource "aws_ssm_parameter" "this" {
   allowed_pattern = var.allowed_pattern
   data_type       = var.data_type
   tags            = var.tags
-
+/*
   lifecycle {
-    ignore_changes = var.ignore_value_changes ? ["value"] : []
+    ignore_changes = var.ignore_value_changes ? [ "value" ] : []
   }
+  */
 }
