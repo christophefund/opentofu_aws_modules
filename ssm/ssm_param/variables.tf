@@ -2,9 +2,8 @@
 # General
 #------------------------------------------------------------------------------
 variable "tags" {
-  description = "Tags to set for the Resources"
   type        = map(string)
-  default     = {}
+  description = "Tags to set for the Resources"
 }
 
 
@@ -18,49 +17,45 @@ variable "name" {
 
 variable "type" {
   type        = string
-  default     = "String"
   description = "The type of the parameter (String, StringList, SecureString)."
 }
 
 variable "value" {
   type        = string
-  default     = null
   description = "The value of the parameter."
 }
 
-
 variable "description" {
   type        = string
-  default     = null
   description = "Description of the parameter."
 }
 
 variable "tier" {
   type        = string
-  default     = null
   description = "Parameter tier: Standard, Advanced, Intelligent-Tiering."
+  default     = "Standard"
 }
 
 variable "key_id" {
   type        = string
-  default     = null
   description = "KMS key ID for encrypting SecureString parameters."
+  default     = null
 }
 
 variable "allowed_pattern" {
   type        = string
-  default     = null
   description = "Regex pattern to validate parameter value."
+  default     = null
 }
 
 variable "data_type" {
   type        = string
-  default     = null
   description = "Data type of the parameter."
+  default     = null
 }
 
 variable "ignore_value_changes" {
   type        = bool
-  default     = false
   description = "Ignore value changes in Terraform lifecycle."
+  default     = false
 }
