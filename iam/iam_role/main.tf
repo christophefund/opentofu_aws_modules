@@ -1,4 +1,14 @@
 #------------------------------------------------------------------------------
+# Create IAM Policy
+#------------------------------------------------------------------------------
+resource "aws_iam_policy" "this" {
+  name        = var.policy_name
+  description = var.policy_description
+  policy      = var.policy_document
+  tags        = var.tags
+}
+
+#------------------------------------------------------------------------------
 # Create IAM Role with Trust Policy for all Accounts in the Organization
 #------------------------------------------------------------------------------
 resource "aws_iam_role" "this" {
